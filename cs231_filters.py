@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 from skimage import exposure
 
 def Sharp_img(img):
-	kernel3 = np.array([[0, -1,  0],
-                   [-1,  5, -1],
-                    [0, -1,  0]])
+	kernel3 = np.array([[-1, -1,  -1],
+                   [-1,  9, -1],
+                    [-1, -1,  -1]])
 	res = cv2.filter2D(src=img, ddepth=-1, kernel=kernel3)
 
 	return res
